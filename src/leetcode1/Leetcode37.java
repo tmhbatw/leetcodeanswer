@@ -10,7 +10,7 @@ public class Leetcode37 {
     * 数字1-9在每一个以粗实线分隔的3x3宫内只能出现一次。
     * 空白格用'.'表示。
     * */
-
+    boolean flag=false;
     char[][] result=null;
     public void solveSudoku(char[][] board) {
         boolean[][] col=new boolean[9][10];
@@ -35,12 +35,12 @@ public class Leetcode37 {
     }
 
     private void recursion(char[][] board,int cur,boolean[][] row,boolean[][] col,boolean[][] block){
-        if(result!=null)
-            return;
         if(cur==81){
+            flag=true;
             result=board;
-            return;
         }
+        if(flag)
+            return;
         int i=cur/9,j=cur%9;
         int blockIndex=i/3*3+j/3;
         if(board[i][j]!='.') {
@@ -48,6 +48,8 @@ public class Leetcode37 {
             return;
         }
         for(int k=1;k<=9;k++){
+            if(flag)
+                return;
             if(row[i][k]||col[j][k]||block[blockIndex][k])
                 continue;
             char[][] curBoard=clone(board);
@@ -58,9 +60,6 @@ public class Leetcode37 {
             curRow[i][k]=true;
             boolean[][] curBlock=clone(block);
             curBlock[blockIndex][k]=true;
-            for(char[] curr:curBoard)
-                System.out.println(Arrays.toString(curr));
-            System.out.println(Arrays.toString(curRow[0]));
             recursion(curBoard,cur+1,curRow,curCol,curBlock);
         }
     }
@@ -94,8 +93,7 @@ public class Leetcode37 {
         }
         new Leetcode37().solveSudoku(c);
         for(int i=0;i<9;i++){
-            for(int j=0;j<9;j++)
-                System.out.println(c[i][j]);
+            System.out.println(new String(c[i]));
         }
     }
 }
