@@ -10,6 +10,10 @@ public class Leetcode37 {
     * 数字1-9在每一个以粗实线分隔的3x3宫内只能出现一次。
     * 空白格用'.'表示。
     * */
+
+    //自己写的稍微有点笨重的方法
+    //不断存储每一个状态并且遍历，实则在不断存储状态的过程中消耗了大量的时间以及空间
+/*
     boolean flag=false;
     char[][] result=null;
     public void solveSudoku(char[][] board) {
@@ -79,6 +83,7 @@ public class Leetcode37 {
         return result;
     }
 
+*/
 
     public static void main(String[] args){
         String[][] q=new String[][]{{"5","3",".",".","7",".",".",".","."},{"6",".",".","1","9","5",".",".","."}
