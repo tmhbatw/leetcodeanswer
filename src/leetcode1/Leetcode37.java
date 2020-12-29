@@ -13,6 +13,48 @@ public class Leetcode37 {
 
     //自己写的稍微有点笨重的方法
     //不断存储每一个状态并且遍历，实则在不断存储状态的过程中消耗了大量的时间以及空间
+    public void solveSudoku(char[][] board) {
+        boolean[][] col=new boolean[9][10];
+        boolean[][] row=new boolean[9][10];
+        boolean[][] block=new boolean[9][10];
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(board[i][j]=='.')
+                    continue;
+                int blockIndex=i/3*3+j/3;
+                int cur=board[i][j]-'0';
+                row[i][cur]=true;
+                col[j][cur]=true;
+                block[blockIndex][cur]=true;
+            }
+        }
+        recursion(board,0,row,col,block);
+    }
+
+    private boolean recursion(char[][] board,int index,boolean[][] row,boolean[][] col,boolean[][] block){
+        if(index==81)
+            return true;
+        int i=index/9,j=index%9,blockIndex=i/3*3+j/3;
+        if(board[i][j]!='.')
+            return recursion(board,index+1,row,col,block);
+        for(int k=1;k<=9;k++){
+            if(!row[i][k]&&!col[j][k]&&!block[blockIndex][k]){
+                board[i][j]=(char)(k+'0');
+                row[i][k]=true;
+                col[j][k]=true;
+                block[blockIndex][k]=true;
+                if(recursion(board,index+1,row,col,block))
+                    return true;
+                else{
+                    board[i][j]='.';
+                    row[i][k]=false;
+                    col[j][k]=false;
+                    block[blockIndex][k]=false;
+                }
+            }
+        }
+        return false;
+    }
 /*
     boolean flag=false;
     char[][] result=null;
