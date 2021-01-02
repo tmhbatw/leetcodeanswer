@@ -19,10 +19,12 @@ public class Leetcode73 {
                 }
             }
         }
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                if(setRow.contains(i)||setCol.contains(j))
-                    matrix[i][j]=0;
+        int[] zero=new int[matrix[0].length];
+        for(int cur:setRow)
+            matrix[cur]=zero;
+        for(int j:setCol){
+            for(int i=0;i<matrix.length;i++){
+                matrix[i][j]=0;
             }
         }
     }
