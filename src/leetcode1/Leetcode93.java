@@ -1,5 +1,6 @@
 package leetcode1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Leetcode93 {
@@ -11,7 +12,54 @@ public class Leetcode93 {
     * */
 
     public List<String> restoreIpAddresses(String s) {
-
-
+        char[] c=s.toCharArray();
+        List<String> result=new ArrayList<>();
+        recursion(result,c,0,0,new StringBuilder());
+        return result;
     }
+
+    private void recursion(List<String> result,char[] c,int number,int index,StringBuilder sb){
+        if(index>=c.length)
+            return;
+        if(number==3){
+            if(index==c.length-1&&c[index]=='0'){
+                sb.append(0);
+                result.add(sb.toString());
+            }else if(c[index]!='0'){
+                int cur=c[index]-'0';
+                for(int i=index+1;i<c.length;i++){
+                    cur=cur*10+c[i]-'0';
+                    if(cur>255)
+                        return;
+                }
+                sb.append(cur);
+                result.add(sb.toString());
+            }else
+                return;
+        }
+        if(c[index]=='0'){
+            StringBuilder curSb=new StringBuilder(sb);
+            curSb.append(0).append('.');
+            recursion(result,c,number+1,index+1,curSb);
+        }else{
+            int cur=0;
+            for(int i=index;i<index+3;i++){
+                if(i<c.length){
+                    cur=cur*10+c[i]-'0';
+                    if(cur>255)
+                        break;
+                    StringBuilder curSb=new StringBuilder(sb);
+                    curSb.append(cur).append('.');
+                    recursion(result,c,number+1,i+1,curSb);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args){
+        List<String> res=new Leetcode93().restoreIpAddresses("010010");
+        System.out.println(res);
+    }
+
+
 }
