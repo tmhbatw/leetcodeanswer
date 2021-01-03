@@ -23,15 +23,14 @@ public class Leetcode84 {
             left[i]=stack.peek()[1];
             stack.add(new int[]{heights[i],i});
         }
-        int[] right=new int[length];
         stack=new Stack<>();
         int result=0;
         stack.add(new int[]{-1,length});
         for(int i=length-1;i>=0;i--){
             while(stack.peek()[0]>=heights[i])
                 stack.pop();
-            right[i]=stack.peek()[1];
-            result=Math.max(result,(right[i]-left[i]-1)*heights[i]);
+            int right=stack.peek()[1];
+            result=Math.max(result,(right-left[i]-1)*heights[i]);
             stack.add(new int[]{heights[i],i});
         }
         return result;
