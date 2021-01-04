@@ -1,5 +1,6 @@
 package leetcode2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Leetcode120 {
@@ -19,19 +20,21 @@ public class Leetcode120 {
         if(n==1)
             return triangle.get(0).get(0);
         int result=Integer.MAX_VALUE;
+        List<Integer> cur=triangle.get(0);
         for(int i=1;i<n;i++){
-            List<Integer> cur=triangle.get(i-1);
             List<Integer> curr=triangle.get(i);
+            List<Integer> list=new ArrayList<>();
             for(int j=0;j<=i;j++){
                 int cur1=j>0?cur.get(j-1):Integer.MAX_VALUE;
                 int cur2=j<i?cur.get(j):Integer.MAX_VALUE;
-                curr.set(j,curr.get(j)+Math.min(cur1,cur2));
+                list.add(curr.get(j)+Math.min(cur1,cur2));
             }
             if(i==n-1){
                 for(int j=0;j<n;j++){
-                    result=Math.min(result,curr.get(j));
+                    result=Math.min(result,list.get(j));
                 }
             }
+            cur=list;
         }
         return result;
     }
