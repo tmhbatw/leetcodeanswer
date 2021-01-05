@@ -6,19 +6,15 @@ public class Leetcode190 {
     * */
 
     public int reverseBits(int n) {
-        boolean negative=n%2==1;
-        n/=2;
         int res=0;
-        int number=(int)Math.pow(2,30);
-        System.out.println(number);
-        while(n!=0){
-            int cur=n%2;
-            if(cur==1){
-                res+=number;
-            }
-            number/=2;
-            n/=2;
+        for(int i=0;i<32;i++){
+            res+=((n>>i)&1)<<(31-i);
         }
-        return negative?Integer.MIN_VALUE+res:res;
+        return res;
+    }
+
+    public static void main(String[] args){
+        String s="11111111111111111111111111111101";
+        new Leetcode190().reverseBits(Integer.parseInt(s,2));
     }
 }
