@@ -1,9 +1,10 @@
+
 package leetcode3;
 
 public class Leetcode243 {
     /*Description
-    * 给定一个单词列表和两个单词 word1 和 word2，返回列表中这两个单词之间的最短距离。
-    * */
+     * 给定一个单词列表和两个单词 word1 和 word2，返回列表中这两个单词之间的最短距离。
+     * */
 
     public int shortestDistance(String[] words, String word1, String word2) {
         int count1=-1;
