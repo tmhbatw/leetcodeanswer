@@ -35,8 +35,8 @@ public class Leetcode207 {
         wait[cur]=true;
         List<Integer> curList=list.get(cur);
         for(int curr:curList){
-            if(wait[cur]||!dfs(curr)) {
-                wait[cur]=false;
+            if(wait[curr]||!dfs(curr)) {
+                wait[curr]=false;
                 return false;
             }
         }
