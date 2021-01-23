@@ -13,33 +13,26 @@ public class Leetcode247 {
 
     public List<String> findStrobogrammatic(int n) {
         List<String> list;
+        if(n==2)
+            return Arrays.asList("11","69","88","96");
         if(n%2==0)
             list= Arrays.asList("11","69","88","96","00");
         else
             list=Arrays.asList("0","1","8");
 
-        for(int i=2;i<n;i+=2){
-            List<String> cur=new ArrayList<>();
-            for(String curr:list){
-                cur.add('1'+curr+'1');
-                cur.add('6'+curr+'9');
-                cur.add('8'+curr+'8');
-                cur.add('9'+curr+'6');
-                cur.add('0'+curr+'0');
+        for(int i=2;i<n;i+=2) {
+            List<String> cur = new ArrayList<>();
+            for (String curr : list) {
+                cur.add('1' + curr + '1');
+                cur.add('6' + curr + '9');
+                cur.add('8' + curr + '8');
+                cur.add('9' + curr + '6');
+                if (i != n - 1&&i!=n-2)
+                    cur.add('0' + curr + '0');
             }
-            list=cur;
+            list = cur;
         }
-        if(n>1)
-            list=remove(list);
-        Collections.sort(list);
         return list;
     }
 
-    private List<String> remove(List<String> list){
-        ArrayList<String> result=new ArrayList<>();
-        for(String cur:list)
-            if(cur.charAt(0)!='0')
-                result.add(cur);
-            return result;
-    }
 }
