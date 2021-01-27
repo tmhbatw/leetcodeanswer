@@ -12,14 +12,15 @@ public class Leetcode370 {
     * */
 
     public int[] getModifiedArray(int length, int[][] updates) {
-        int [] dp=new int[length+1];
+        int [] dp=new int[length];
         for(int[] cur:updates){
             dp[cur[0]]+=cur[2];
+            if(cur[1]!=length-1)
             dp[cur[1]+1]-=cur[2];
         }
-        for(int i=1;i<dp.length;i++){
+        for(int i=1;i<length;i++){
             dp[i]+=dp[i-1];
         }
-        return Arrays.copyOf(dp,length);
+        return dp;
     }
 }
