@@ -12,19 +12,24 @@ public class Leetcode320 {
     public List<String> generateAbbreviations(String word) {
         if(word==null||word.length()==0)
             return Collections.emptyList();
-        return generateAbbreviations(word,0,true);
+        List<String> result=generateAbbreviations(word,0,true);
+        result.addAll(generateAbbreviations(word,0,false));
+        return result;
     }
 
     private List<String> generateAbbreviations(String word,int start,boolean isNumber){
         List<String> result=new ArrayList<>();
-        if(start==word.length()-1){
+        if(start==word.length()){
             result.add("");
             return result;
         }
-        char c=word.charAt(start);
-        List<String> res=generateAbbreviations(word,start+1,true);
-        for(String cur:res){
-            result.add(c+cur);
+        if(!isNumber) {
+            for (int i = start; i < word.length(); i++) {
+                String cur = word.substring(start, i + 1);
+                List<String> list = generateAbbreviations(word, i + 1, true);
+                for (String s : list)
+                    result.add(cur + s);
+            }
         }
         if(isNumber){
             for(int i=start;i<word.length();i++){
