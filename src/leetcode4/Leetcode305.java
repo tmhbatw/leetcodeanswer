@@ -39,8 +39,12 @@ public class Leetcode305 {
             }
             result+=1-set.size();
             list.add(result);
-            for(int curr:set)
-                type[curr]=cur;
+            if(set.size()!=0) {
+                int t = set.iterator().next();
+                type[cur] = t;
+                for (int curr : set)
+                    type[curr] = t;
+            }
         }
         return list;
     }
