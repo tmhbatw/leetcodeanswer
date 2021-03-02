@@ -8,6 +8,7 @@ public class forOffer55_2 {
     public boolean isBalanced(TreeNode root) {
         if(root==null)
             return true;
+        getDepth(root);
         return isBalanced;
     }
 
@@ -16,6 +17,7 @@ public class forOffer55_2 {
             return 0;
         int left=getDepth(root.left);
         int right=getDepth(root.right);
+        System.out.println(root.val+" left is "+left+" right is "+right);
         if(Math.abs(left-right)>1){
             isBalanced=false;
             return 0;
