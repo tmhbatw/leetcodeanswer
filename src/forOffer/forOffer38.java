@@ -16,16 +16,16 @@ public class forOffer38 {
         int length=s.length();
         List<String> list=new ArrayList<>();
         boolean[] reached=new boolean[c.length];
-        dfs(list,c,reached,"",0,length);
+        dfs(list,c,reached,new StringBuilder(),0,length);
         String[] res=new String[list.size()];
         for(int i=0;i<list.size();i++)
             res[i]=list.get(i);
         return res;
     }
 
-    private void dfs(List<String> list,char[] c,boolean[] reached,String cur,int index,int length){
+    private void dfs(List<String> list,char[] c,boolean[] reached,StringBuilder cur,int index,int length){
         if(index==length){
-            list.add(cur);
+            list.add(cur.toString());
             return;
         }
         char pre=' ';
@@ -35,7 +35,7 @@ public class forOffer38 {
                     continue;
                 pre=c[i];
                 reached[i]=true;
-                dfs(list,c,reached,cur+c[i],index+1,length);
+                dfs(list,c,reached,new StringBuilder(cur).append(c[i]),index+1,length);
                 reached[i]=false;
             }
         }
