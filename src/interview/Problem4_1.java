@@ -8,12 +8,12 @@ public class Problem4_1 {
     * */
 
     public boolean findWhetherExistsPath(int n, int[][] graph, int start, int target) {
-        List<Set<Integer>> list=new ArrayList<>();
+        Set<Integer>[] list=new Set[n];
         for(int i=0;i<n;i++){
-            list.add(new HashSet<>());
+            list[i]=(new HashSet<>());
         }
         for(int[] cur:graph) {
-           Set<Integer> set=list.get(cur[0]);
+           Set<Integer> set=list[cur[0]];
            set.add(cur[1]);
         }
         boolean[] reached=new boolean[n];
@@ -22,7 +22,7 @@ public class Problem4_1 {
         q.add(start);
         while(!q.isEmpty()){
             int cur=q.poll();
-            Set<Integer> set=list.get(cur);
+            Set<Integer> set=list[cur];
             for(int i:set){
                 if(!reached[i]){
                     if(i==target)
