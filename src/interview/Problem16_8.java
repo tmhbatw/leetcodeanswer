@@ -35,7 +35,4 @@ public class Problem16_8 {
         return "";
     }
 
-    private String transform2(int num){
-
-    }
 }
