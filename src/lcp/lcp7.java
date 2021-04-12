@@ -14,21 +14,22 @@ public class lcp7 {
 
 
     public int numWays(int n, int[][] relation, int k) {
-        Map<Integer, List<Integer>> map=new HashMap<>();
+        Map<Integer, int[]> map=new HashMap<>();
         for(int i=0;i<n;i++)
-            map.put(i,new ArrayList<>());
+            map.put(i,new int[n]);
         for(int[] cur:relation){
-            List<Integer> list=map.get(cur[0]);
-            list.add(cur[1]);
+            int[] list=map.get(cur[0]);
+            list[cur[1]]++;
         }
         int[] dp=new int[n];
         dp[0]=1;
         for(int i=0;i<k;i++){
             int[] curDp=new int[n];
             for(int j=0;j<n;j++){
-                List<Integer> list=map.get(j);
-                for(int cur:list)
-                    curDp[cur]+=dp[j];
+                int[] list=map.get(j);
+                for(int l=0;l<n;l++){
+                    curDp[l]+=list[l]*dp[j];
+                }
             }
             dp=curDp;
         }
