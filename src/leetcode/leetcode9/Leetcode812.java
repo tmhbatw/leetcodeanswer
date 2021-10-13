@@ -1,6 +1,6 @@
 package leetcode.leetcode9;
 
-public class LINTCODE812 {
+public class Leetcode812 {
 
     public double largestTriangleArea(int[][] points) {
         double result=0;
@@ -29,6 +29,6 @@ public class LINTCODE812 {
 
     public static void main(String[] args){
         int[][] points=new int[][]{{-35,19},{40,19},{27,-20},{35,-3},{44,20},{22,-21},{35,33},{-19,42},{11,47},{11,37}};
-        System.out.println(new LINTCODE812().largestTriangleArea(points));
+        System.out.println(new Leetcode812().largestTriangleArea(points));
     }
 }
