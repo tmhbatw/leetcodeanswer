@@ -1,13 +1,14 @@
 package leetcode.leetcode13;
 
+import datastructure.ListNode;
+
 public class Leetcode1290 {
-    public int[] replaceElements(int[] arr) {
-        int last=-1;
-        for(int j=arr.length-1;j>=0;j--){
-            int temp=arr[j];
-            arr[j]=last;
-            last=Math.max(temp,last);
+    public int getDecimalValue(ListNode head) {
+        int count=0;
+        while(head!=null) {
+            count = count * 2 + head.val;
+            head=head.next;
         }
-        return arr;
+        return count;
     }
 }
