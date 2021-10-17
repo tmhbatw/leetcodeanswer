@@ -1,6 +1,6 @@
 package forOffer2;
 
-public class FotOffer32 {
+public class ForOffer32 {
 
     public boolean isAnagram(String s, String t) {
         if(s.equals(t))
