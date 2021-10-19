@@ -1,5 +1,10 @@
 package forOffer2;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class ForOffer29 {
 
     public int orchestraLayout(int num, int xPos, int yPos) {
@@ -25,4 +30,39 @@ public class ForOffer29 {
         }
         return (int)(index%9==0?9:index%9);
     }
+
+    public Node insert(Node head, int insertVal) {
+        if(head==null){
+            Node result=new Node(insertVal);
+            result.next=result;
+            return result;
+        }
+        Node cur=head;
+        while(cur.next!=head){
+            if((cur.val<=insertVal&&cur.next.val>=insertVal)
+                    ||(cur.next.val<cur.val
+                    &&(cur.val<=insertVal ||insertVal<=cur.next.val))) {
+                break;
+            }
+            cur = cur.next;
+        }
+        cur.next = new Node(insertVal,cur.next);
+        return head;
+    }
+
+    class Node {
+        public int val;
+        public Node next;
+
+        public Node() {}
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _next) {
+            val = _val;
+            next = _next;
+        }
+    };
 }
