@@ -1,5 +1,7 @@
 package forOffer2;
 
+import java.util.*;
+
 public class ForOffer33 {
 
     public int storeWater(int[] bucket, int[] vat) {
@@ -24,5 +26,25 @@ public class ForOffer33 {
                 return false;
         }
         return true;
+    }
+
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String,List<String>> map=new HashMap<>();
+        for(String s:strs){
+            String type=getType(s);
+            map.putIfAbsent(type,new ArrayList<>());
+            map.get(type).add(s);
+        }
+        List<List<String>> result=new ArrayList<>();
+        for(Map.Entry<String,List<String>> entry:map.entrySet()){
+            result.add(entry.getValue());
+        }
+        return result;
+    }
+
+    private String getType(String cur){
+        char[] c=cur.toCharArray();
+        Arrays.sort(c);
+        return new String(c);
     }
 }
