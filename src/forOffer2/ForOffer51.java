@@ -9,29 +9,20 @@ import java.util.Stack;
 
 public class ForOffer51 {
 
+    int result=Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
-        Stack<TreeNode> s=new Stack<>();
-        Map<TreeNode, Integer> map=new HashMap<>();
-        map.put(null,0);
-
-        int result=0;
-        s.add(root);
-        while(!s.isEmpty()){
-            TreeNode cur=s.pop();
-            if(!map.containsKey(cur.left)||!map.containsKey(cur.right)){
-                s.add(cur);
-                if(cur.left!=null)
-                    s.add(cur.left);
-                if(cur.right!=null)
-                    s.add(cur.right);
-                continue;
-            }
-            int left=map.get(cur.left);
-            int right=map.get(cur.right);
-            result=Math.max(left+right+cur.val,result);
-            map.put(cur,Math.max(left,right)+cur.val);
-        }
+        if(root==null)
+            return result;
+        getMaxValue(root);
         return result;
+    }
+
+    private int getMaxValue(TreeNode root){
+        if(root==null)
+            return 0;
+        int leftValue=getMaxValue(root.left),rightValue=getMaxValue(root.right);
+        result=Math.max(rightValue+leftValue+root.val,result);
+        return Math.max(Math.max(leftValue,rightValue)+root.val,0);
     }
 
 
