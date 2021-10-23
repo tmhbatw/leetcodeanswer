@@ -1,8 +1,8 @@
-package forOffer2;
+package leetcode.leetcode5;
 
 import java.util.*;
 
-public class ForOffer115 {
+public class Leetcode444 {
 
     public boolean sequenceReconstruction(int[] org, List<List<Integer>> seqs) {
         if(seqs.size()==0)
