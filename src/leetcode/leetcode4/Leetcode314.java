@@ -1,6 +1,7 @@
 package leetcode.leetcode4;
 
 import datastructure.TreeNode;
+import leetcode.leetcode10.Leetcode987;
 
 import java.util.*;
 
@@ -27,14 +28,7 @@ public class Leetcode314 {
             List<Integer> list=map.getOrDefault(curVal,new ArrayList<>());
             list.add(root.val);
             map.put(curVal,list);
-            if(cur.left!=null){
-                q1.add(cur.left);
-                q2.add(curVal-1);
-            }
-            if(cur.right!=null){
-                q1.add(cur.right);
-                q2.add(curVal+1);
-            }
+            Leetcode987.addNode(q1, q2, cur, curVal);
         }
         List<List<Integer>> result=new ArrayList<>();
         while(left<=right){
