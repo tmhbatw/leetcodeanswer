@@ -7,29 +7,17 @@ import java.util.Queue;
 
 public class Leetcode958 {
 
-    public boolean isCompleteTree(TreeNode root) {
-        if(root==null)
-            return true;
-
-        boolean empty=false;
-
-        Queue<TreeNode> q=new LinkedList<>();
-        q.add(root);
-        while(!q.isEmpty()){
-            TreeNode cur=q.poll();
-            if(cur.left!=null){
-                if(empty)
-                    return false;
-                q.add(cur.left);
-            }else
-                empty=true;
-            if(cur.right!=null){
-                if(empty)
-                    return false;
-                q.add(cur.right);
-            }else
-                empty=true;
+    public int kthGrammar(int n, int k) {
+        if(k==1)
+            return 0;
+        for(int i=30;i>=0;i--){
+            if(k>(1<<i))
+                return 1-kthGrammar(n,k-(1<<i));
         }
-        return true;
+        return -1;
+    }
+
+    public static void main(String[] args){
+        System.out.println(1<<31);
     }
 }
