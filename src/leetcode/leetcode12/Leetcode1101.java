@@ -32,4 +32,38 @@ public class Leetcode1101 {
         }
         return count+1<=days;
     }
+
+    public int earliestAcq(int[][] logs, int n) {
+        int[] type=new int[n];
+        init(type);
+
+        int num=n;
+        Arrays.sort(logs,(o1,o2)->{
+            return o1[0]-o2[0];
+        });
+
+        for(int[] log:logs){
+            int t1=getType(type,log[1]);
+            int t2=getType(type,log[2]);
+            if(t1==t2)
+                continue;
+
+            type[t2]=t1;
+            num--;
+            if(num==1)
+                return log[0];
+        }
+        return -1;
+    }
+
+    private int getType(int[] type,int cur){
+        if(type[cur]==cur)
+            return cur;
+        return getType(type,type[cur]);
+    }
+
+    private void init(int[] num){
+        for(int i=0;i<num.length;i++)
+            num[i]=i;
+    }
 }
