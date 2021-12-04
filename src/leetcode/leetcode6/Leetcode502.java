@@ -1,6 +1,5 @@
 package leetcode.leetcode6;
 
-import sun.util.resources.cldr.kk.CurrencyNames_kk;
 
 import java.util.*;
 

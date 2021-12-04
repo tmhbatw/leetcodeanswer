@@ -1,7 +1,5 @@
 package leetcode.leetcode9;
 
-import sun.tools.jconsole.inspector.Utils;
-
 import java.util.*;
 
 public class Leetcode847 {
