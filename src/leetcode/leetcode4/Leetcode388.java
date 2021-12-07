@@ -9,6 +9,7 @@ public class Leetcode388 {
 
     public int lengthLongestPath(String input) {
         String[] s=input.split("\n");
+
         Stack<Integer> s1=new Stack<>();
         Stack<Integer> s2=new Stack<>();
         int result=0;
@@ -24,10 +25,11 @@ public class Leetcode388 {
             }
             int curLength=(s1.isEmpty()?0:s1.peek())+curS.length()+1;
 
-            result=Math.max(result,curLength);
+            if(curS.contains("."))
+                result=Math.max(result,curLength);
             s1.add(curLength);
             s2.add(index);
         }
-        return result-1;
+        return Math.max(0,result-1);
     }
 }
