@@ -6,8 +6,7 @@ import java.util.PriorityQueue;
 
 public class Leetcode1810 {
     class GridMaster {
-        boolean canMove(char direction){return false;};
-        int move(char direction){return 0;};
+        boolean canMove(char direction){return false;};int move(char direction){return 0;};
         boolean isTarget(){return true;};
     }
 
