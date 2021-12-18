@@ -1,6 +1,6 @@
 package leetcode.leetcode22;
 
-public class leetcode2103 {
+public class Leetcode2103 {
 
     public int countPoints(String rings) {
         int[] num=new int[10];
