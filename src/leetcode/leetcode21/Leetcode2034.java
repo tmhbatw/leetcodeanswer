@@ -1,46 +1,42 @@
 package leetcode.leetcode21;
 
+import java.util.HashMap;
+import java.util.TreeMap;
+
 public class Leetcode2034 {
 
-    class Bank {
+    class StockPrice {
 
-        long[] balance;
-        int n;
-        public Bank(long[] balance) {
-            this.balance=balance;
-            this.n=balance.length;
+        TreeMap<Integer,Integer> time;
+        TreeMap<Integer,Integer> val;
+        public StockPrice() {
+            this.time= new TreeMap<>();
+            this.val = new TreeMap<>();
         }
 
-        public boolean transfer(int account1, int account2, long money) {
-            if(!isValidAccount(account1)||!isValidAccount(account2))
-                return false;
-            if(balance[account1-1]<money)
-                return false;
-            balance[account1-1]-=money;
-            balance[account2-1]+=money;
+        public void update(int timestamp, int price) {
+            if(time.containsKey(timestamp)){
+                int val=time.get(timestamp);
+                if(this.val.get(val)==1)
+                    this.val.remove(val);
+                else
+                    this.val.put(val,this.val.get(val)-1);
+            }
 
-            return true;
+            time.put(timestamp,price);
+            this.val.put(price,this.val.getOrDefault(price,0)+1);
         }
 
-        private boolean isValidAccount(int account){
-            return account>=1&&account<=n;
+        public int current() {
+            return time.get(time.lastKey());
         }
 
-        public boolean deposit(int account, long money) {
-            if(!isValidAccount(account))
-                return false;
-            balance[account-1]+=money;
-
-            return true;
+        public int maximum() {
+            return val.lastKey();
         }
 
-        public boolean withdraw(int account, long money) {
-
-            if(!isValidAccount(account)||balance[account-1]<money)
-                return false;
-            balance[account-1]-=money;
-
-            return true;
+        public int minimum() {
+            return val.firstKey();
         }
     }
 }
