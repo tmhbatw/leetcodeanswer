@@ -1,4 +1,4 @@
-package leetcode.leetcode23;
+package leetcode.leetcode24;
 
 public class Leetcode2315 {
 
