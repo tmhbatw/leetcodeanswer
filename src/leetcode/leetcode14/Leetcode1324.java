@@ -3,7 +3,7 @@ package leetcode.leetcode14;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Leetcodee1324 {
+public class Leetcode1324 {
     public List<String> printVertically(String s) {
         String[] word=s.split(" ");
         int row=0;
