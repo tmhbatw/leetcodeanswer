@@ -7,28 +7,27 @@ import java.util.Set;
 
 public class Leetcode1007 {
 
-    public int minDominoRotations(int[] tops, int[] bottoms) {
-        List<Integer> s=new ArrayList<>();
-        s.add(tops[0]);
-        s.add(bottoms[0]);
-
+    private boolean exist(int cur,int[] tops,int[] bottoms){
         for(int i=0;i<tops.length;i++){
-            for(int index=s.size()-1;index>=0;index--){
-                int cur=s.get(index);
-                if(cur!=tops[i]&&cur!=bottoms[i])
-                    s.remove(index);
-            }
-
-            if(s.size()==0)
-                return -1;
+            if(cur!=tops[i]&&cur!=bottoms[i])
+                return false;
         }
+        return true;
+    }
+    public int minDominoRotations(int[] tops, int[] bottoms) {
 
         int result=Integer.MAX_VALUE;
-        for(int cur:s){
+        if(exist(tops[0],tops,bottoms)){
+            int cur=tops[0];
             result=Math.min(result,getRes(tops,cur));
             result=Math.min(result,getRes(bottoms,cur));
         }
-        return result;
+        if(exist(bottoms[0],tops,bottoms)){
+            int cur = bottoms[0];
+            result=Math.min(result,getRes(tops,cur));
+            result=Math.min(result,getRes(bottoms,cur));
+        }
+        return result==Integer.MAX_VALUE?-1:result;
     }
 
     private int getRes(int[] tops,int cur){
