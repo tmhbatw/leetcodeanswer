@@ -1,5 +1,7 @@
 package leetcode.leetcode16;
 
+import java.util.Arrays;
+
 public class Leetcode1503 {
     public String reformatDate(String date) {
         String[] d=date.split(" ");
@@ -19,5 +21,12 @@ public class Leetcode1503 {
                 return i+1;
         }
         return 0;
+    }
+
+    public int getLastMoment(int n, int[] left, int[] right) {
+        int min=left.length>0?Arrays.stream(left).max().getAsInt():0;
+        int max=right.length>0?Arrays.stream(right).min().getAsInt():n;
+
+        return Math.max(min,n-max);
     }
 }
