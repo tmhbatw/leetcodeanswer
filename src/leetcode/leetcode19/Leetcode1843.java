@@ -26,10 +26,13 @@ public class Leetcode1843 {
         int index=0;
         int t=0;
         for(int i=0;i<result.length;i++){
+            System.out.println(q.size());
             if(q.isEmpty()){
                 q.add(new int[]{task[i][2],task[i][1]});
                 index=i+1;
+                t=task[i][0];
             }
+            System.out.println(Arrays.toString(q.peek()));
             result[i]=q.peek()[0];
             int curTime = t+q.poll()[1];
             while(index<result.length-1&&task[index+1][0]<=curTime)
@@ -38,6 +41,5 @@ public class Leetcode1843 {
 
         return result;
     }
-
 
 }
