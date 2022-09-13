@@ -51,19 +51,11 @@ public class Leetcode2029 {
             return alice;
         c1--;
         alice=!alice;
-        while(c2>=0&&c1>=0){
-            if(c2==0&&c1==0)
-                return false;
-            if(c2==0)
-                return alice;
-            c2--;
-            alice=!alice;
-            if(c1==0)
-                return alice;
-            c1--;
-            alice=!alice;
-        }
-        return false;
+        if(c1==c2)
+            return false;
+        if(c2<c1)
+            return alice;
+        return !alice;
     }
 
     private boolean getTwo(int c0,int c1,int c2) {
@@ -76,19 +68,11 @@ public class Leetcode2029 {
             return alice;
         c2--;
         alice=!alice;
-        while(c1>=0&&c2>=0){
-            if(c1==0&&c2==0)
-                return false;
-            if(c1==0)
-                return alice;
-            c1--;
-            alice=!alice;
-            if(c2==0)
-                return alice;
-            c2--;
-            alice=!alice;
-        }
-        return false;
+        if(c1==c2)
+            return false;
+        if(c1<c2)
+            return alice;
+        return !alice;
     }
 
 }
