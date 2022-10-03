@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LeetcodeEditor">
+    <option name="projectConfig">
+      <map>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1146]快照数组.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1146]快照数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1146" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1146]快照数组.java" />
+              <option name="titleSlug" value="snapshot-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1498]满足条件的子序列数目.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1498]满足条件的子序列数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1498" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1498]满足条件的子序列数目.java" />
+              <option name="titleSlug" value="number-of-subsequences-that-satisfy-the-given-sum-condition" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1562]查找大小为 M 的最新分组.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1562]查找大小为 M 的最新分组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1562" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1562]查找大小为 M 的最新分组.java" />
+              <option name="titleSlug" value="find-latest-group-of-size-m" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1620]网络信号最好的坐标.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1620]网络信号最好的坐标.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1620" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1620]网络信号最好的坐标.java" />
+              <option name="titleSlug" value="coordinate-with-maximum-network-quality" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1895]最大的幻方.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1895]最大的幻方.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1895" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1895]最大的幻方.java" />
+              <option name="titleSlug" value="largest-magic-square" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1968]构造元素不等于两相邻元素平均值的数组.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[1968]构造元素不等于两相邻元素平均值的数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1968" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[1968]构造元素不等于两相邻元素平均值的数组.java" />
+              <option name="titleSlug" value="array-with-elements-not-equal-to-average-of-neighbors" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[2039]网络空闲的时刻.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[2039]网络空闲的时刻.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2039" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[2039]网络空闲的时刻.java" />
+              <option name="titleSlug" value="the-time-when-the-network-becomes-idle" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[2383]赢得比赛需要的最少训练时长.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[2383]赢得比赛需要的最少训练时长.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2383" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[2383]赢得比赛需要的最少训练时长.java" />
+              <option name="titleSlug" value="minimum-hours-of-training-to-win-a-competition" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[911]在线选举.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[911]在线选举.md" />
+              <option name="frontendQuestionId" value="leetcode.cn911" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[911]在线选举.java" />
+              <option name="titleSlug" value="online-election" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[963]最小面积矩形 II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[963]最小面积矩形 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn963" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[963]最小面积矩形 II.java" />
+              <option name="titleSlug" value="minimum-area-rectangle-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[LCP 08]剧情触发时间.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/doc/content/[LCP 08]剧情触发时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cnLCP 08" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="/var/folders/b1/0fd1b6hs7lz0fm_mh346lybm0000gn/T/leetcode/editor/cn/[LCP 08]剧情触发时间.java" />
+              <option name="titleSlug" value="ju-qing-hong-fa-shi-jian" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
