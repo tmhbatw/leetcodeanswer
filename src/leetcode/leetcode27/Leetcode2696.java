@@ -1,6 +1,6 @@
 package leetcode.leetcode27;
 
-public class Leetcode2698 {
+public class Leetcode2696 {
 
     public int minLength(String s) {
         for (int i = 0; i < s.length() - 1; i++) {
